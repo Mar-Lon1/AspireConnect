@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AspireConnect - Mentor Booking</title>
+    <!-- tailwind css CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FONT AWESOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 ">
+
+    <div class="bg-[url('hero2.jpg')] h-screen bg-center bg-cover ">
+        <!-- NAVBAR -->
+        <nav class=" shadow-2xl/80 text-white">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+                <h1 class="text-3xl font-bold text-White">AspireConnect</h1>
+                <div class="space-x-6 font-bold">
+                    <a href="#" class="hover:text-blue-700">Home</a>
+                    <a href="#" class="hover:text-blue-700">Mentors</a>
+                    <a href="#" class="hover:text-blue-700">Book</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- HERO -->
+        <section class="text-white py-60">
+            <div class="max-w-7xl mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold mb-4">Connect with Mentors Who Guide Your Future</h2>
+                <p class="mb-6 font-bold">Book sessions with experienced professionals and gain real-world insights.</p>
+                <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">
+        Get Started
+      </button>
+            </div>
+        </section>
+    </div>
+
+    <!-- CATEGORIES -->
+    <section class="py-16 ">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-8 text-center">Explore Career Paths</h3>
+            <div class="grid md:grid-cols-4 gap-6">
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                    <h4 class="font-semibold text-lg">Engineering <i class="fa-solid fa-helmet-safety"></i></h4>
+                    <p class="text-sm text-gray-500">Software, Civil, Mechanical</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                    <h4 class="font-semibold text-lg"> Medicine <i class="fa-solid fa-briefcase-medical"></i> </h4>
+                    <p class="text-sm text-gray-500">Doctors, Nurses, Specialists</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                    <h4 class="font-semibold text-lg">Business <i class="fa-solid fa-business-time"></i></h4>
+                    <p class="text-sm text-gray-500">Entrepreneurs, Finance</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
+                    <h4 class="font-semibold text-lg">Creative <i class="fa-solid fa-clapperboard"></i></h4>
+                    <p class="text-sm text-gray-500">Design, Media, Arts</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-8 text-center">Meet Our Mentors</h3>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- Mentor Card -->
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <img src="ama-mensah.jpg" class="mx-auto rounded-full mb-4 h-[500px] " />
+                    <h4 class="font-semibold text-lg">Dr. Ama Mensah</h4>
+                    <p class="text-sm text-gray-500 mb-2">Medical Doctor</p>
+                    <p class="text-sm mb-4">5+ years experience guiding students into medicine.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Book Session
+          </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <img src="kwame-asare.jpg" class="mx-auto rounded-full mb-4 h-[500px]" />
+                    <h4 class="font-semibold text-lg">Kwame Asare</h4>
+                    <p class="text-sm text-gray-500 mb-2">Software Engineer</p>
+                    <p class="text-sm mb-4">Helping beginners break into tech careers.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Book Session
+          </button>
+                </div>
+
+                <div class="bg-white rounded-lg shadow p-6 text-center">
+                    <img src="akosua-owusu2.jpg" class="mx-auto rounded-full mb-4 h-[500px]" />
+                    <h4 class="font-semibold text-lg">Akosua Owusu</h4>
+                    <p class="text-sm text-gray-500 mb-2">Entrepreneur</p>
+                    <p class="text-sm mb-4">Guiding youth in business and startups.</p>
+                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Book Session
+          </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section class="py-16">
+        <div class="max-w-3xl mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-6 text-center">Book a Session</h3>
+
+            <form class="bg-white p-6 rounded-lg shadow space-y-4">
+                <input type="text" placeholder="Your Name" class="w-full border p-3 rounded" />
+                <input type="email" placeholder="Your Email" class="w-full border p-3 rounded" />
+                <select class="w-full border p-3 rounded">
+          <option>Select Mentor</option>
+          <option>Dr. Ama Mensah</option>
+          <option>Kwame Asare</option>
+          <option>Akosua Owusu</option>
+        </select>
+                <input type="date" class="w-full border p-3 rounded" />
+
+                <button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
+          Confirm Booking
+        </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="bg-gray-100 py-16">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-6">Your Upcoming Sessions</h3>
+
+            <div class="bg-white p-6 rounded-lg shadow">
+                <p class="font-semibold">Session with Kwame Asare</p>
+                <p class="text-gray-500 text-sm">April 28, 2026 • 10:00 AM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-blue-600 text-white text-center py-6 mt-10">
+        <p>© 2026 AspireConnect. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

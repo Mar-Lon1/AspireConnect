@@ -13,123 +13,522 @@
 
 <body class="bg-gray-50 ">
 
-    <div class="bg-[url('hero4.jpg')] h-screen bg-center bg-cover ">
-        <!-- NAVBAR -->
-        <nav class=" shadow-2xl/80 text-white">
-            <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 class="text-3xl font-bold text-White">AspireKonnect</h1>
-                <div class="space-x-6 font-bold">
-                    <a href="#" class="hover:text-blue-700">Home</a>
-                    <a href="mentors.html" class="hover:text-blue-700">Mentors</a>
-                    <a href="#" class="hover:text-blue-700">Book</a>
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-6">
+            <div class="flex  items-center h-16">
+
+                <!-- Logo -->
+                <div class="flex justify-between">
+                    <img src="AspireKonnect-favi.jpg" class="h-8 w-12 " alt="">
+                    <h1 class="text-2xl font-bold text-indigo-600 pr-5"> AspireKonnect</h1>
+                </div>
+
+                <!-- Nav Links -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
+                    <a href="mentors.html" class="text-gray-700 hover:text-indigo-600 font-medium">Mentors</a>
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Services</a>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="hidden md:flex flex-1 mx-6">
+                    <input type="text" placeholder="Search mentors, careers..." class="w-100 px-4 py-2 border rounded-full focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+                </div>
+
+                <!-- Auth Buttons -->
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Login</a>
+                    <a href="#" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition">
+          Sign Up
+        </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-gray-700 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-4 pb-4">
+
+            <!-- Search -->
+            <input type="text" placeholder="Search mentors..." class="w-full px-4 py-2 border rounded-full mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+            <!-- Links -->
+            <a href="#" class="block py-2 text-gray-700">Home</a>
+            <a href="mentors.html" class="block py-2 text-gray-700">Mentors</a>
+            <a href="#" class="block py-2 text-gray-700">Services</a>
+
+            <!-- Auth -->
+            <div class="mt-4 space-y-2">
+                <a href="#" class="block text-center py-2 border rounded-full">Login</a>
+                <a href="#" class="block text-center py-2 bg-indigo-600 text-white rounded-full">
+        Sign Up
+      </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Toggle Script
+        <script>
+            const btn = document.getElementById('menu-btn');
+            const menu = document.getElementById('mobile-menu');
+
+            btn.addEventListener('click', () => {
+                menu.classList.toggle('hidden');
+            });
+        </script> -->
+
+    <!-- HERO -->
+
+
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+
+            <!-- LEFT CONTENT -->
+            <div>
+                <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                    Discover Your <br />
+                    <span class="bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent">
+          Career Path
+        </span>
+                </h1>
+
+                <p class="mt-4 text-gray-600 text-lg">
+                    Connect with experienced mentors and explore career opportunities tailored to your passion and goals.
+                </p>
+
+                <!-- CTA + STATS -->
+                <div class="mt-6 flex items-center gap-6">
+                    <button class="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-6 py-3 rounded-full shadow-lg hover:scale-105 transition">
+          Get Started
+        </button>
+
+                    <div class="flex gap-6 text-sm">
+                        <div>
+                            <p class="font-bold text-lg">50+</p>
+                            <p class="text-gray-500">Career Paths</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-lg">1K+</p>
+                            <p class="text-gray-500">Mentors</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
 
-        <!-- HERO -->
-        <section class="text-white py-60">
-            <div class="max-w-7xl mx-auto px-4 text-center">
-                <h2 class="text-4xl font-bold mb-4">Connect with Mentors Who Guide Your Future</h2>
-                <p class="mb-6 font-bold">Book sessions with experienced professionals and gain real-world insights.</p>
-                <button class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-300">
+            <!-- RIGHT IMAGE -->
+            <div class="relative flex justify-center">
+
+                <!-- Background Glow -->
+                <div class="absolute w-100 h-100 bg-purple-200 rounded-full blur-3xl opacity-50 "></div>
+
+                <!-- Image -->
+                <img src="hero6.jpg" class="relative z-10 w-140  h-140 rounded-full  shadow-2xl bg-center bg-cover" />
+
+                <!-- Floating Card 1 -->
+                <div class="absolute top-6 left-0 bg-white px-1 py-2 rounded-xl shadow-xl text-sm">
+                    🎓 1,200+ Mentees
+                </div>
+
+                <!-- Floating Card 2 -->
+                <div class="absolute bottom-6 right-0 bg-white px-4 py-3 rounded-xl shadow-md">
+                    <p class="text-sm font-semibold">Growth</p>
+                    <div class="flex gap-2 mt-2">
+                        <div class="w-2 h-8 bg-indigo-400 rounded"></div>
+                        <div class="w-2 h-12 bg-purple-400 rounded"></div>
+                        <div class="w-2 h-6 bg-pink-400 rounded"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CAREER CARDS -->
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 mt-16">
+            <h2 class="text-xl font-semibold text-gray-800 mb-6">
+                Explore Career Paths
+            </h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+                <!-- Card 1 -->
+                <div class="p-6 rounded-2xl text-white shadow-lg bg-gradient-to-br from-pink-400 to-red-400 hover:scale-105 transition">
+                    <p class="text-lg font-semibold">Tech <i class="fa-solid fa-laptop"></i></p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-6 rounded-2xl text-white shadow-lg bg-gradient-to-br from-indigo-400 to-purple-500 hover:scale-105 transition">
+                    <p class="text-lg font-semibold">Health <i class="fa-solid fa-briefcase-medical"></i></p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-6 rounded-2xl text-white shadow-lg bg-gradient-to-br from-cyan-400 to-blue-500 hover:scale-105 transition">
+                    <p class="text-lg font-semibold">Craft <i class="fa-solid fa-screwdriver-wrench"></i></p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="p-6 rounded-2xl text-white shadow-lg bg-gradient-to-br from-orange-400 to-yellow-400 hover:scale-105 transition">
+                    <p class="text-lg font-semibold">Business & Finance <i class="fa-solid fa-store"></i></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Career guidance section -->
+
+    <section class="py-20 bg-gradient-to-br from-indigo-50 via-white to-purple-50">
+        <div class="max-w-5xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    Find Your Perfect Career Path
+                </h2>
+                <p class="mt-3 text-gray-600">
+                    Tell us about your goals and interests — we’ll match you with the right career guidance, pathways and mentors.
+                </p>
+            </div>
+
+            <!-- Form Card -->
+            <div class="bg-white/70 backdrop-blur-xl shadow-xl rounded-3xl p-8 border border-gray-200">
+
+                <form class="space-y-6">
+
+                    <!-- Career Input -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+            Desired Career
+          </label>
+                        <div class="relative">
+                            <input type="text" placeholder="e.g. Software Engineer, Doctor, Entrepreneur" class="w-full px-5 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none" />
+                            <span class="absolute right-4 top-3.5 text-gray-400">🔍</span>
+                        </div>
+                    </div>
+
+                    <!-- Interests -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-3">
+            Your Interests
+          </label>
+                        <div class="flex flex-wrap gap-3">
+
+                            <button type="button" class="px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 hover:bg-indigo-200 transition">
+              Technology
+            </button>
+
+                            <button type="button" class="px-4 py-2 rounded-full bg-pink-100 text-pink-700 hover:bg-pink-200 transition">
+              Creativity
+            </button>
+
+                            <button type="button" class="px-4 py-2 rounded-full bg-green-100 text-green-700 hover:bg-green-200 transition">
+              Business
+            </button>
+
+                            <button type="button" class="px-4 py-2 rounded-full bg-yellow-100 text-yellow-700 hover:bg-yellow-200 transition">
+              Science
+            </button>
+
+                            <button type="button" class="px-4 py-2 rounded-full bg-purple-100 text-purple-700 hover:bg-purple-200 transition">
+              Helping People
+            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Goals -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+            Your Goal
+          </label>
+                        <select class="w-full px-5 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <option>Choose your main goal</option>
+            <option>Get a high-paying job</option>
+            <option>Start a business</option>
+            <option>Work abroad</option>
+            <option>Build a creative career</option>
+          </select>
+                    </div>
+
+                    <!-- Education Level -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+            Your Level of Education
+          </label>
+                        <select class="w-full px-5 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+            <option>Choose your level of Education</option>
+            <option>SHS/NVTI student</option>
+            <option>SHS/NVTI graduate</option>
+            <option>Undergraduate</option>
+            <option>Post Graduate</option>
+            <option></option>
+          </select>
+                    </div>
+
+                    <!-- Experience Level -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+            Experience Level
+          </label>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-indigo-500 hover:bg-indigo-50">
+              Beginner
+            </button>
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-indigo-500 hover:bg-indigo-50">
+              Intermediate
+            </button>
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-indigo-500 hover:bg-indigo-50">
+              Advanced
+            </button>
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-indigo-500 hover:bg-indigo-50">
+              Not Sure
+            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Learning Style -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">
+            Preferred Learning Style
+          </label>
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-purple-500 hover:bg-purple-50">
+              Videos
+            </button>
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-purple-500 hover:bg-purple-50">
+              Reading
+            </button>
+
+                            <button type="button" class="p-3 rounded-xl border hover:border-purple-500 hover:bg-purple-50">
+              Practical
+            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="pt-4 text-center">
+                        <button type="submit" class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold shadow-lg hover:scale-105 transition">
+            Get Career Guidance
+          </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- end of career guidance -->
+
+
+
+
+    <!-- how it works 2 -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    How AspireConnect Works
+                </h2>
+                <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+                    A simple step-by-step process to guide you toward the right career path.
+                </p>
+            </div>
+
+            <div class="relative">
+
+                <!-- Connecting Line -->
+                <div class="hidden md:block absolute top-16 left-0 w-full h-1 bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-10 relative z-10">
+
+                    <!-- Step 1 -->
+                    <div class="text-center group">
+
+                        <!-- Step Number -->
+                        <p class="text-sm font-semibold text-indigo-500">01</p>
+
+                        <!-- Icon -->
+                        <div class="w-18 h-18 mx-auto mt-2 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-book-open text-3xl"></i>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-6h13M9 11l-4 4m0 0l4 4m-4-4h13" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-4 font-semibold text-lg">Take Assessment</h3>
+                        <p class="mt-2 text-gray-600 text-sm ">
+                            Fill in your interests, strengths, and career goals.
+                        </p>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="text-center group">
+                        <p class="text-sm font-semibold text-purple-500">02</p>
+
+                        <div class="w-18 h-18 mx-auto mt-2 flex items-center justify-center rounded-full bg-purple-100 text-purple-600 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-bullseye text-3xl"></i>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 1.343-3 3s1.343 3 3 3 3-1.343 3-3-1.343-3-3-3zm0 0V3m0 18v-5" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-4 font-semibold text-lg">Get Matched</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Receive personalized career recommendations.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="text-center group">
+                        <p class="text-sm font-semibold text-pink-500">03</p>
+
+                        <div class="w-18 h-18 mx-auto mt-2 flex items-center justify-center rounded-full bg-pink-100 text-pink-600 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-handshake text-3xl"></i>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5V4H2v16h5m10 0v-4a3 3 0 00-3-3H10a3 3 0 00-3 3v4" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-4 font-semibold text-lg">Connect with Mentors</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Book sessions with industry professionals.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="text-center group">
+                        <p class="text-sm font-semibold text-yellow-500">04</p>
+
+                        <div class="w-18 h-18 mx-auto mt-2 flex items-center justify-center rounded-full bg-yellow-100 text-yellow-600 group-hover:scale-110 transition">
+                            <i class="fa-solid fa-rocket text-3xl"></i>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+
+                        <h3 class="mt-4 font-semibold text-lg">Start Your Journey</h3>
+                        <p class="mt-2 text-gray-600 text-sm">
+                            Follow a roadmap and achieve your goals.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-16">
+                <button class="px-8 py-3 rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-semibold shadow-lg hover:scale-105 transition">
         Get Started
       </button>
             </div>
-        </section>
-    </div>
 
-    <!-- CATEGORIES -->
-    <section class="py-16 ">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-2xl font-bold mb-8 text-center">Explore Career Paths</h3>
-            <div class="grid md:grid-cols-4 gap-6">
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-                    <h4 class="font-semibold text-lg">Engineering <i class="fa-solid fa-helmet-safety"></i></h4>
-                    <p class="text-sm text-gray-500">Software, Civil, Mechanical</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-                    <h4 class="font-semibold text-lg"> Health <i class="fa-solid fa-briefcase-medical"></i> </h4>
-                    <p class="text-sm text-gray-500">Doctors, Nurses, Specialists</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-                    <h4 class="font-semibold text-lg">Business <i class="fa-solid fa-business-time"></i></h4>
-                    <p class="text-sm text-gray-500">Entrepreneurs, Finance</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg">
-                    <h4 class="font-semibold text-lg">Creative <i class="fa-solid fa-clapperboard"></i></h4>
-                    <p class="text-sm text-gray-500">Design, Media, Arts</p>
-                </div>
-
-            </div>
         </div>
     </section>
 
-    <!-- MENTORS -->
-    <section class="bg-gray-100 py-16">
-        <div class="max-w-7xl mx-auto px-4">
-            <h3 class="text-2xl font-bold mb-8 text-center">Meet Our Mentors</h3>
 
-            <div class="grid md:grid-cols-3 gap-8">
 
-                <!-- Mentor Card -->
-                <div class="bg-white rounded-lg shadow p-6 text-center">
-                    <img src="ama-mensah.jpg" class="mx-auto rounded-full mb-4 h-[500px] " />
-                    <h4 class="font-semibold text-lg">Dr. Ama Mensah</h4>
-                    <p class="text-sm text-gray-500 mb-2">Medical Doctor</p>
-                    <p class="text-sm mb-4">5+ years experience guiding students into medicine.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Book Session
-          </button>
+
+
+
+
+    <!--  Testimonials-->
+    <section class="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                    What Mentees Are Saying
+                </h2>
+                <p class="mt-3 text-gray-600 max-w-2xl mx-auto">
+                    Real stories from students who found clarity and direction with AspireConnect.
+                </p>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        “I had no idea what career to choose after SHS. AspireConnect matched me with a UI/UX mentor and now I’m building my first portfolio.”
+                    </p>
+
+                    <div class="flex items-center mt-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold text-gray-900">Ama Mensah</p>
+                            <p class="text-sm text-gray-500">Aspiring UI Designer</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow p-6 text-center">
-                    <img src="kwame-asare.jpg" class="mx-auto rounded-full mb-4 h-[500px]" />
-                    <h4 class="font-semibold text-lg">Kwame Asare</h4>
-                    <p class="text-sm text-gray-500 mb-2">Software Engineer</p>
-                    <p class="text-sm mb-4">Helping beginners break into tech careers.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Book Session
-          </button>
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        “The mentorship sessions changed everything. I now understand the path to becoming a software engineer and what skills to focus on.”
+                    </p>
+
+                    <div class="flex items-center mt-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold text-gray-900">Kwame Asare</p>
+                            <p class="text-sm text-gray-500">Future Software Engineer</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="bg-white rounded-lg shadow p-6 text-center">
-                    <img src="akosua-owusu2.jpg" class="mx-auto rounded-full mb-4 h-[500px]" />
-                    <h4 class="font-semibold text-lg">Akosua Owusu</h4>
-                    <p class="text-sm text-gray-500 mb-2">Entrepreneur</p>
-                    <p class="text-sm mb-4">Guiding youth in business and startups.</p>
-                    <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-            Book Session
-          </button>
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition duration-300">
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        “I used to feel lost about my future. Now I have a clear roadmap and a mentor guiding me step by step.”
+                    </p>
+
+                    <div class="flex items-center mt-6">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" class="w-12 h-12 rounded-full object-cover" />
+                        <div class="ml-3">
+                            <p class="font-semibold text-gray-900">Efua Owusu</p>
+                            <p class="text-sm text-gray-500">Business Student</p>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <!-- BOOKING SECTION -->
-    <section class="py-16">
-        <div class="max-w-3xl mx-auto px-4">
-            <h3 class="text-2xl font-bold mb-6 text-center">Book a Session</h3>
+            <!-- Highlight Stat -->
+            <div class="mt-16 text-center">
+                <div class="inline-block bg-white px-8 py-5 rounded-2xl shadow-md">
+                    <p class="text-3xl font-bold text-indigo-600">92%</p>
+                    <p class="text-gray-600 text-sm mt-1">
+                        of mentees say they gained career clarity after using AspireConnect
+                    </p>
+                </div>
+            </div>
 
-            <form class="bg-white p-6 rounded-lg shadow space-y-4">
-                <input type="text" placeholder="Your Name" class="w-full border p-3 rounded" />
-                <input type="email" placeholder="Your Email" class="w-full border p-3 rounded" />
-                <select class="w-full border p-3 rounded">
-          <option>Select Mentor</option>
-          <option>Dr. Ama Mensah</option>
-          <option>Kwame Asare</option>
-          <option>Akosua Owusu</option>
-        </select>
-                <input type="date" class="w-full border p-3 rounded" />
-
-                <button class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700">
-          Confirm Booking
-        </button>
-            </form>
         </div>
     </section>
 
